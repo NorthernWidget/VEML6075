@@ -38,7 +38,6 @@ uint8_t VEML6075::begin()
     Wire.write(0x00);
     Wire.write(0x00);
     return Wire.endTransmission(true); //Return sucess or failue of I2C connection
-    Serial.println("BANG!");
 }
 
 uint8_t VEML6075::SetIntTime(unsigned int Time)
@@ -148,7 +147,7 @@ uint8_t VEML6075::SendCommand(uint8_t Command)
 uint8_t VEML6075::WriteConfig(uint8_t NewConfig)
 {
 	Wire.beginTransmission(ADR);
-	Wire.write(0x00);  //Write command code to Config register
+	Wire.write(CONF_CMD);  //Write command code to Config register
 	Wire.write(NewConfig);
 	uint8_t Error = Wire.endTransmission();
 
