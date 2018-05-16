@@ -181,5 +181,4 @@ int VEML6075::ReadWord(uint8_t Command)  //Send command value, returns entire 16
 	uint8_t ByteHigh = Wire.read();
 	if(Error == 0) return ((ByteHigh << 8) | ByteLow); //If read succeeded, return concatonated value
 	else return -1; //Return error if read failed
-
 }
