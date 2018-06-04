@@ -1,19 +1,18 @@
-
-
 /******************************************************************************
-MS5803_I2C.cpp
-Library for MS5803 pressure sensor.
+VEML6075.cpp
+Library for VEML6075 UV sensor
 Bobby Schulz @ Northern Widget LLC
-6/26/2014
-https://github.com/sparkfun/MS5803-14BA_Breakout
+5/16/2018
+https://github.com/NorthernWidget/VEML6075
 
-The MS5803 is a media isolated temperature and pressure sensor made by
-Measurment Specialties which can be used to measure either water pressure
-and depth, or baramatric (atmospheric) pressure, and altitude along with that
+The VEML6075 is an integrated UVA and UVB sensor make by Vishay, with an I2C interface. This
+device has independent UVA and UVB channels and a manually variable integration time. 
 
-"Instruments register only through things they're designed to register.
-Space still contains infinite unknowns."
--Mr. Spock
+"There has to be an invisible sun
+It gives its heat to everyone
+There has to be an invisible sun
+That gives us hope when the whole day's done"
+-Sting
 
 Distributed as-is; no warranty is given.
 ******************************************************************************/
