@@ -41,13 +41,14 @@ Distributed as-is; no warranty is given.
 #define CONTINUIOUS 0x00
 #define SINGLE_SHOT 0x01
 
-#define ADR 0x10
+// #define ADR 0x10
 
 
 class VEML6075
 {
 public:
     VEML6075();  // Constructor
+    uint8_t begin(uint8_t ADR_); // Begin sensor with non-standard address
     uint8_t begin(); // Begin sensor
     uint8_t SetIntTime(unsigned int Time);
     uint8_t Shutdown();
@@ -70,6 +71,7 @@ private:
     float b = 0.55;
     float c = 2.46;
     float d = 0.63;
+    uint8_t ADR = 0x10; //Use default address natively 
 };
 
 #endif

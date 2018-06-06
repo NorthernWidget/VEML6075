@@ -26,6 +26,12 @@ VEML6075::VEML6075()
 {
 }
 
+uint8_t VEML6075::begin(uint8_t ADR_) //Initalize with alternate address
+{ 
+	ADR = ADR_;  //Set non-standard address
+	begin(); //Call conventional startup
+}
+
 uint8_t VEML6075::begin()
 // Initialize library for subsequent pressure measurements
 {
